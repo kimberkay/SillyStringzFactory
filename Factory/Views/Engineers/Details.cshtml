@@ -1,0 +1,26 @@
+@model Fanbase.Models.Film
+
+<h2>Film Details</h2>
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<h3>@Html.DisplayNameFor(model => model.DateOfRelease): @Html.DisplayFor(model => model.HireDate)</h3>
+
+
+@if (@Model.JoinEntities.Count == 0)
+{
+  <p>This engineer is not licensed to work on any machines</p>
+}
+else
+{
+  <h3>Licensed for these machines:</h3>
+  <ul>
+  @foreach (var join in Model.JoinEntities)
+    {
+      <li>@join.Machine.Name</li>
+    }
+  </ul>
+}
+
+<p class="bottom-link">@Html.ActionLink("Edit engineer", "Edit", new { id = Model.EngineerId })</p>
+<p class="bottom-link">@Html.ActionLink("Delete engineer", "Delete", new { id = Model.EngineerId })</p>
+<p class="bottom-link">@Html.ActionLink("Return to engineer List", "Index", "Engineers")</p>
+<p class="bottom-link">@Html.ActionLink("Return to Home", "Index", "Home")</p>
