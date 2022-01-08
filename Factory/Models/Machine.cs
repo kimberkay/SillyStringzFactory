@@ -23,10 +23,6 @@ namespace Factory.Models
 
     public DateTime DateOfLastMaintenance  { get; set; }
 
-    
-    public virtual Factory {get; set; }
-
-    public int FactoryId { get; set; }
     public virtual ICollection<EngineerMachine> JoinEntities { get; set; }
   }
 }
