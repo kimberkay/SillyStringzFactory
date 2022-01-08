@@ -1,0 +1,24 @@
+@model Factory.Models.Machine
+
+<h4>Edit this machine: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+    <p>@Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)</p>
+
+    <p>@Html.LabelFor(model => model.Description)
+    @Html.TextBoxFor(model => model.Description)</p>
+    
+    <p>@Html.LabelFor(model => model.InOperation)
+    @Html.CheckBoxFor(model => model.InOperation)</p>
+
+    <p>@Html.LabelFor(model => model.LastInspection)
+    @Html.TextBoxFor(model => model.LastInspection, "{0:MM-dd-yyyy}")</p>
+    
+    <p>@Html.LabelFor(model => model.DateOfLastMaintenance)
+    @Html.TextBoxFor(model => model.DateOfLastMaintenance, "{0:MM-dd-yyyy}")</p>
+    <p><input type="submit" value="Add Machine" /></p>
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
