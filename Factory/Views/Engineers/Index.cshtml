@@ -1,15 +1,12 @@
 @using Factory.Models;
-@model List<Factory.Models.Machine>
+@model List<Factory.Models.Engineer>;
 
-<h2>Machines</h2>
-<ul>
-  @foreach (Machine machine in Model)
-  {
-    <li>@Html.ActionLink($"{machine.Name}", "Details", new { id = machine.MachineId })</li>
-  }
+  <h1>Engineers</h1>
+  <ul>
+    @foreach (Engineer engineer in Model)
+    {
+      <li>@Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })</li>
+    }
   </ul>
 
-  <p>@Html.ActionLink("Add new machine", "Create")</p>
-
-<p>@Html.ActionLink("Return to Engineers", "Index", "Engineers")</p>
-<p>@Html.ActionLink("Return Home", "Index", "Home")</p>
+  <p>@Html.ActionLink("Add new engineer", "Create")</p>

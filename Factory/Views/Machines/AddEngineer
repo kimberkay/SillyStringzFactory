@@ -1,3 +1,4 @@
+@using Factory.Models;
 @model Factory.Models.Machine
 
 <h2>Add Engineer</h2>
