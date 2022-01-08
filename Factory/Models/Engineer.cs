@@ -16,13 +16,8 @@ namespace Factory.Models
     public string LastName { get; set; }
 
     public DateTime HireDate { get; set; }
-
- 
-
-
-
-
-
+  
+    public virtual ICollection<EngineerMachine> JoinEntities { get; set; }
 
   }
 }

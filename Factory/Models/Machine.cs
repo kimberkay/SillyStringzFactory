@@ -8,7 +8,7 @@ namespace Factory.Models
   {
     public Machine()
     {
-      this.JoinEntities = new Hashet<EngineerMachine>();
+      this.JoinEntities = new HashSet<EngineerMachine>();
       this.InOperation = false;
     }
 

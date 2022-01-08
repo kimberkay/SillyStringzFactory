@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Factory.Models
 {
   public class EngineerMachine
@@ -7,5 +9,7 @@ namespace Factory.Models
     public int EngineerId { get; set; }
     public virtual Machine Machine { get; set; }
     public virtual Engineer Engineer { get; set; }
+
+    public virtual ICollection<EngineerMachine> JoinEntities { get; set; }
   }
 }
