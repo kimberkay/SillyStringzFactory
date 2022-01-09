@@ -14,8 +14,7 @@ namespace Factory.Migrations
                 {
                     EngineerId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    FirstName = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
-                    LastName = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
+                    Name = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
                     HireDate = table.Column<DateTime>(type: "datetime(6)", nullable: false)
                 },
                 constraints: table =>
@@ -32,8 +31,8 @@ namespace Factory.Migrations
                     Name = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
                     Description = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
                     InOperation = table.Column<bool>(type: "tinyint(1)", nullable: false),
-                    LastInspection = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    DateOfLastMaintenance = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    InstallationDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    LastInspection = table.Column<DateTime>(type: "datetime(6)", nullable: false)
                 },
                 constraints: table =>
                 {

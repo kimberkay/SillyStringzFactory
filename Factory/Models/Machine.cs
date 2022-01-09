@@ -19,9 +19,9 @@ namespace Factory.Models
 
     public bool InOperation { get; set; }
 
-    public DateTime LastInspection { get; set; }
+    public DateTime InstallationDate  { get; set; }
 
-    public DateTime DateOfLastMaintenance  { get; set; }
+    public DateTime LastInspection { get; set; }
 
     public virtual ICollection<EngineerMachine> JoinEntities { get; set; }
   }

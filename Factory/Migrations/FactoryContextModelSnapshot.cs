@@ -23,13 +23,10 @@ namespace Factory.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("FirstName")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
                     b.Property<DateTime>("HireDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("LastName")
+                    b.Property<string>("Name")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("EngineerId");
@@ -69,14 +66,14 @@ namespace Factory.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("DateOfLastMaintenance")
-                        .HasColumnType("datetime(6)");
-
                     b.Property<string>("Description")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<bool>("InOperation")
                         .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime>("InstallationDate")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("LastInspection")
                         .HasColumnType("datetime(6)");
