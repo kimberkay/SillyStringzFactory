@@ -1,6 +1,29 @@
-<h1>Welcome to Silly Stringz Factory Operations</h1>
+@using Factory.Models
 
-<p>@Html.ActionLink("See all machines", "Index", "Machines")</p> 
-<p>@Html.ActionLink("See all engineers", "Index", "Engineers")</p>
+<h1>Welcome to Silly Stringz Factory Operations!</h1>
+
+
+<h2>Machines:</h2>
+<ul>
+@foreach (var machine in ViewData["machines"] as List<Machine>)
+{
+    <li>
+        @Html.ActionLink($"{machine.Name}", "Details", "Machines", new { id = machine.MachineId })
+    </li>
+}
+</ul>
+
+<h2>Engineers:</h2>
+<ul>
+@foreach (var engineer in ViewData["engineers"] as List<Engineer>)
+{
+    <li>
+        @Html.ActionLink($"{engineer.Name}", "Details", "Engineers", new { id = engineer.EngineerId })
+    </li>
+}
+</ul>
+
+<p>@Html.ActionLink("Go to machines", "Index", "Machines")</p> 
+<p>@Html.ActionLink("Go to engineers", "Index", "Engineers")</p>
 
 
