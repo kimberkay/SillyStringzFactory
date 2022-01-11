@@ -6,13 +6,13 @@
 {
   @Html.HiddenFor(model => model.EngineerId)
 
-  @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
+  <p>@Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)</p>
 
-  @Html.LabelFor(model => model.HireDate)
-  @Html.TextBoxFor(model => model.HireDate, "{0:d MMM yyyy}", new {@type="date"})
+  <p>@Html.LabelFor(model => model.HireDate)
+  @Html.TextBoxFor(model => model.HireDate, "{0:d MMM yyyy}", new {@type="date"})</p>
 
   <button class="btn" type="submit">Edit engineer</button>
 }
 
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Back to engineer list", "Index")</p>

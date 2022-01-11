@@ -1,7 +1,7 @@
 @using Factory.Models;
 @model List<Factory.Models.Machine>
 
-<h1>Machine</h1>
+<h1>Machines</h1>
 <ul>
   @foreach (Machine machine in Model)
   {
@@ -11,5 +11,5 @@
 
   <p>@Html.ActionLink("Add new machine", "Create")</p>
 
-<p>@Html.ActionLink("Return to Engineers", "Index", "Films")</p>
+<p>@Html.ActionLink("Go to Engineers", "Index", "Engineers")</p>
 <p>@Html.ActionLink("Return Home", "Index", "Home")</p>

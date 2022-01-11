@@ -57,6 +57,8 @@ namespace Factory.Controllers
       return RedirectToAction("Details", new { id = engineer.EngineerId } );
     }
 
+    
+
     public ActionResult Delete(int id)
     {
       var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);

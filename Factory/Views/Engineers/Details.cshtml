@@ -2,7 +2,7 @@
 
 <h2>Engineer Details</h2>
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-<h3>@Html.DisplayNameFor(model => model.HireDate): @Html.DisplayFor(model => model.HireDate)</h3>
+<h3>@Html.DisplayNameFor(model => model.HireDate): @Html.DisplayFor(model => model.HireDate,"{0:d MMM yyyy}", new {@type="date"}))</h3>
 
 
 @if (@Model.JoinEntities.Count == 0)
@@ -20,6 +20,7 @@ else
   </ul>
 }
 
+<p>@Html.ActionLink("Add Machine", "AddMachine", new { id = Model.EngineerId })</p>
 <p class="bottom-link">@Html.ActionLink("Edit engineer", "Edit", new { id = Model.EngineerId })</p>
 <p class="bottom-link">@Html.ActionLink("Delete engineer", "Delete", new { id = Model.EngineerId })</p>
 <p class="bottom-link">@Html.ActionLink("Return to engineer List", "Index", "Engineers")</p>

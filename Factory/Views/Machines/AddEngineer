@@ -17,4 +17,4 @@
 
 <p>Don't see the film you were looking for? @Html.ActionLink("Add film here", "Create", "Films")</p>
 
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Back to machine list", "Index")</p>
