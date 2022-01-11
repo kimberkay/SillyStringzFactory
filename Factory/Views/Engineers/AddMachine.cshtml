@@ -1,0 +1,19 @@
+@model Factory.Models.Engineer
+
+<h2>Add a machine for this engineer:</h2>
+
+<h4>@Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.EngineerId)
+
+  @Html.Label("Select Machine")
+  @Html.DropDownList("MachineId")
+
+  <input type="submit" value="Save">
+}
+
+<p>Didn't find the film you were looking for? @Html.ActionLink("Add machine here", "Create", "Machines")</p>
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
